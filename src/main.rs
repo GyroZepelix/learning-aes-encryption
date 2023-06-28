@@ -1,7 +1,9 @@
 use aes::cipher::{generic_array::GenericArray, KeyInit};
 use aes::{Aes128, Block};
 use anyhow::Result;
-use namecrypt::{decrypt_blocks, encrypt_blocks, print_blocks_to_hex, string_to_blocks};
+use learning_aes_encryption::{
+    decrypt_blocks, encrypt_blocks, print_blocks_to_hex, string_to_blocks,
+};
 use std::io;
 fn main() -> Result<()> {
     let key = GenericArray::from([10u8; 16]);
